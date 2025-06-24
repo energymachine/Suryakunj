@@ -13,7 +13,7 @@ header {
 }
 
 .logo {
-  height: 50px;
+  height: 100px;
 }
 
 nav a, .btn {
@@ -104,7 +104,7 @@ nav a, .btn {
   position: fixed;
   bottom: 20px;
   right: 20px;
-  background: #25D366;
+  background: #ffffff;
   padding: 10px 15px;
   border-radius: 20px;
   display: flex;
@@ -115,9 +115,8 @@ nav a, .btn {
 }
 
 .chat-widget img {
-  height: 24px;
-  width: 24px;
-  margin-right: 10px;
+  height: 50px;
+  width: 50px;
   border-radius: 50%;
 }
 
