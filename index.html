@@ -4,42 +4,386 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Suryakunj</title>
-  <link rel="stylesheet" href="style.css"/>
-  <script src="script.js" defer></script>
+  <link rel="stylesheet" href="css/style.css" />
+  <script src="js/script.js" defer></script>
 </head>
 <body>
   <header>
-    <img src="logo.jpg" alt="Logo" class="logo"/>
-    <nav>
-      <a href="#">Products</a>
-      <a href="#">About Us</a>
-      <a href="#">Services</a>
-      <button class="btn green">Register</button>
-      <button class="btn blue">Login</button>
+    <img src="images/logo.png" alt="Logo" class="logo"/>
+
+  <div class="menu-toggle" onclick="toggleMenu()">
+    <div></div>
+    <div></div>
+    <div></div>
+  </div>
+
+    <nav class="navbar" id="navbar">
+            <ul class="nav-buttons" id="nav-menu"> 
+                <a href="#about" class="nav-btn">About Us</a>
+                <a href="#products" class="nav-btn">Products</a>
+                <a href="#Services" class="nav-btn">Services</a>
+                <button onclick="openModal('loginModal')" class="btn blue">Login</button>
+                <button onclick="openModal('registerModal')" class="btn green">Register</button>
+            </ul>
     </nav>
   </header>
 
   <section class="carousel">
-    <div class="slides">
-      <img src="1.jpg" class="slide" alt="Slide 1" />
-      <img src="2.jpg" class="slide" alt="Slide 2" />
-      <img src="3.jpg" class="slide" alt="Slide 3" />
+  <div class="slides">
+    <div class="slide active">
+      <div class="overlay"></div>
+      <img src="images/1.jpg" alt="Slide 1" />
+      <div class="caption">Welcome to Suryakunj Farmers Producers Company Ltd.</div>
     </div>
-    <div class="carousel-caption">
-      <h1>Welcome to Suryakunj Farmers Producers Company Ltd.</h1>
-      <p> -Empowering Farmers -Connecting Markets -Delivering Quality</p>
-      <h2>Suryakunj FPCL is a leading federation of over 60 Farmer Producer Companies (FPCs) across Maharashtra, India, working together to strengthen the agricultural ecosystem and uplift the livelihoods of thousands of farmers.</h2>
-    </div>
-    <div class="dots">
-      <span class="dot active"></span>
-      <span class="dot"></span>
-      <span class="dot"></span>
-    </div>
-  </section>
+    <div class="slide">
+      <div class="overlay"></div>
+      <img src="images/2.jpg" alt="Slide 2" />
+      <div class="caption">Empowering Farmers
+      <p>Strengthening rural roots with unity, tools, and opportunity.</p>
+      </div>
+      </div>
 
-  <div class="chat-widget">
+    <div class="slide">
+      <div class="overlay"></div>
+      <img src="images/3.jpg" alt="Slide 3" />
+      <div class="caption">Connecting Markets
+      <p>Bridging farmers to buyers with trust and transparency.</p>
+      </div>
+      </div>
+
+    <div class="slide">
+      <div class="overlay"></div>
+      <img src="images/4.jpg" alt="Slide 4" />
+      <div class="caption">Delivering Quality
+      <p>Consistent, traceable, and farm-fresh — every time.</p>
+      </div>
+      </div>
+  </div>
+
+  <div class="dots">
+    <span class="dot active"></span>
+    <span class="dot"></span>
+    <span class="dot"></span>
+    <span class="dot"></span>
+  </div>
+</section>
+
+  <!-- About Section -->
+  <section class="about-section" id="about">
+  <h2>Who we are</h2>
+  
+  <div class="intro-text">
+    <p>Since 2018, we have been actively engaged in onion procurement and large-scale supply chain management, collaborating with national-level agencies like NAFED and NCCF. Our federation ensures traceability, transparency, and consistent quality—building trust across every link of the supply chain.
+</p>
+  </div>
+
+  <!-- Mission and Vision Cards -->
+  <div class="card-row">
+    <div class="card">
+      <div class="card-icon">📡</div>
+      <h3>Our Mission</h3>
+      <p>To empower farmer communities through collective strength, advanced infrastructure, and market linkages, enabling fair pricing, transparent trade, and better incomes for producers.</p>
+    </div>
+    <div class="card">
+      <div class="card-icon">🔭</div>
+      <h3>Our Vision</h3>
+      <p>To be India’s most trusted farmer federation, bridging rural producers with national and global markets through innovation, integrity, and inclusivity with a strong foundation in onion, fruits, pulses, and fresh vegetables.</p>
+    </div>
+  </div>
+
+  <!-- Purpose Section -->
+  <div class="purpose-section">
+    <div class="purpose-left">
+      <h3>The<br>Purpose That Fuels Us</h3>
+    </div>
+    <div class="purpose-right">
+      <p>Since 2018, we’ve been actively driving transformation in onion procurement and large-scale supply chain management. Our collaboration with national agencies like NAFED and NCCF, along with a 45,000 MT storage facility and a dedicated market in Umrane (Nashik), positions us to:</p>
+      <li>Minimize middlemen</li>
+      <li>Guarantee traceability & quality</li>
+      <li>Ensure direct farm-to-market access</li>
+      <p>We’re committed to creating a transparent, reliable, and sustainable supply chain from farm to fork.</p>
+    </div>
+  </div>
+
+  <!-- Team Gradient Section -->
+  <div class="team-gradient">
+    <h3>The Team: A Force of Change</h3>
+    <p>Our team comprises visionary agri-leaders, grassroots mobilizers, logistics experts, and dedicated FPC members who believe in collective power.</p>
+    <p>Together, we are shaping the future of Indian agriculture — and now stepping into global markets, ready to scale impact, not just profits.</p>
+  </div>
+</section>
+
+
+  <section class="products-section" id="products">
+  <h2>Our Products</h2>
+  <p>We have more than 40 products which include fruits, vegetables, legumes & nuts</p>
+  <div class="product-carousel">
+    <div class="carousel-track">
+      <div class="product-card">
+        <img src="images/product1.jpg" alt="Yoga">
+        <div class="product-name">Onion</div>
+      </div>
+      <div class="product-card">
+        <img src="images/product2.jpg" alt="Functional">
+        <div class="product-name">Banana</div>
+      </div>
+      <div class="product-card">
+        <img src="images/product3.jpg" alt="Aerobics">
+        <div class="product-name">Ginger</div>
+      </div>
+      <div class="product-card">
+        <img src="images/product4.jpg" alt="Zumba">
+        <div class="product-name">Litchi</div>
+      </div>
+      <div class="product-card">
+        <img src="images/product5.jpg" alt="Weight">
+        <div class="product-name">Jhambul</div>
+      </div>
+      <div class="product-card">
+        <img src="images/product6.jpg" alt="Yoga">
+        <div class="product-name">Badami</div>
+      </div>
+      <div class="product-card">
+        <img src="images/product7.jpg" alt="Functional">
+        <div class="product-name">Ladies Finger</div>
+      </div>
+      <div class="product-card">
+        <img src="images/product8.jpg" alt="Aerobics">
+        <div class="product-name">Peas</div>
+      </div>
+      <div class="product-card">
+        <img src="images/product9.jpg" alt="Zumba">
+        <div class="product-name">Red Capsicum</div>
+      </div>
+      <div class="product-card">
+        <img src="images/product10.jpg" alt="Weight">
+        <div class="product-name">Groundnuts</div>
+      </div>
+      <div class="product-card">
+        <img src="images/product11.jpg" alt="Weight">
+        <div class="product-name">Dates</div>
+      </div>
+      <div class="product-card">
+        <img src="images/product12.jpg" alt="Weight">
+        <div class="product-name">Mallika</div>
+      </div>
+      <div class="product-card">
+        <img src="images/product13.jpg" alt="Weight">
+        <div class="product-name">Dasheri</div>
+      </div>
+      <div class="product-card">
+        <img src="images/product14.jpg" alt="Weight">
+        <div class="product-name">Kesar</div>
+      </div>
+      <div class="product-card">
+        <img src="images/product15.jpg" alt="Weight">
+        <div class="product-name">Alphonso</div>
+      </div>
+      <div class="product-card">
+        <img src="images/product16.jpg" alt="Weight">
+        <div class="product-name">Totapuri</div>
+      </div>
+      <div class="product-card">
+        <img src="images/product17.jpg" alt="Weight">
+        <div class="product-name">Rajapuri</div>
+      </div>
+      <div class="product-card">
+        <img src="images/product18.jpg" alt="Weight">
+        <div class="product-name">Payri</div>
+      </div>
+      <div class="product-card">
+        <img src="images/product19.jpg" alt="Weight">
+        <div class="product-name">Chausa</div>
+      </div>
+      <div class="product-card">
+        <img src="images/product20.jpg" alt="Weight">
+        <div class="product-name">Hyacinth Beans</div>
+      </div>
+      <div class="product-card">
+        <img src="images/product21.jpg" alt="Weight">
+        <div class="product-name">Purple Snake Beans</div>
+      </div>
+      <div class="product-card">
+        <img src="images/product22.jpg" alt="Weight">
+        <div class="product-name">Shatavari Roots</div>
+      </div>
+      <div class="product-card">
+        <img src="images/product23.jpg" alt="Weight">
+        <div class="product-name">Red Apple Bore</div>
+      </div>
+      <div class="product-card">
+        <img src="images/product24.jpg" alt="Weight">
+        <div class="product-name">Sugarcane</div>
+      </div>
+      <div class="product-card">
+        <img src="images/product25.jpg" alt="Weight">
+        <div class="product-name">Elephant Foot Yam</div>
+      </div>
+      <div class="product-card">
+        <img src="images/product26.jpg" alt="Weight">
+        <div class="product-name">Green Pigeon Peas</div>
+      </div>
+      <div class="product-card">
+        <img src="images/product27.jpg" alt="Weight">
+        <div class="product-name">Bottle Gourd</div>
+      </div>
+      <div class="product-card">
+        <img src="images/product28.jpg" alt="Weight">
+        <div class="product-name">Ivy Gourd</div>
+      </div>
+      <div class="product-card">
+        <img src="images/product29.jpg" alt="Weight">
+        <div class="product-name">Green Chilli</div>
+      </div>
+      <div class="product-card">
+        <img src="images/product30.jpg" alt="Weight">
+        <div class="product-name">French Beans</div>
+      </div>
+      <div class="product-card">
+        <img src="images/product31.jpg" alt="Weight">
+        <div class="product-name">Coconuts</div>
+      </div>
+      <div class="product-card">
+        <img src="images/product32.jpg" alt="Weight">
+        <div class="product-name">Spine Gourd</div>
+      </div>
+      <div class="product-card">
+        <img src="images/product33.jpg" alt="Weight">
+        <div class="product-name">Beetroot</div>
+      </div>
+      <div class="product-card">
+        <img src="images/product34.jpg" alt="Weight">
+        <div class="product-name">Pumpkin</div>
+      </div>
+      <div class="product-card">
+        <img src="images/product35.jpg" alt="Weight">
+        <div class="product-name">Guava</div>
+      </div>
+      <div class="product-card">
+        <img src="images/product36.jpg" alt="Weight">
+        <div class="product-name">Carrots</div>
+      </div>
+      <div class="product-card">
+        <img src="images/product37.jpg" alt="Weight">
+        <div class="product-name">Cluster Beans</div>
+      </div>
+      <div class="product-card">
+        <img src="images/product38.jpg" alt="Weight">
+        <div class="product-name">Red Chilli</div>
+      </div>
+      <div class="product-card">
+        <img src="images/product39.jpg" alt="Weight">
+        <div class="product-name">Sapota</div>
+      </div>
+      <div class="product-card">
+        <img src="images/product40.jpg" alt="Weight">
+        <div class="product-name">Banana Leaves</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<h2 class="services-heading">Our Services</h2>
+
+<section class="services-section" id="Services">
+  <div class="service-box" style="background-image: url('images/AIS.jpg');">
+    <div class="overlay"></div>
+    <div class="service-text">
+      <h3>Agricultural Input Services</h3>
+      <p>Reliable sourcing of seeds, fertilizers, and agri-inputs for better yields.</p>
+    </div>
+  </div>
+
+  <div class="service-box" style="background-image: url('images/Export.jpg');">
+    <div class="overlay"></div>
+    <div class="service-text">
+      <h3>Export</h3>
+      <p>End-to-end export solutions with quality checks and global compliance.</p>
+    </div>
+  </div>
+
+  <div class="service-box" style="background-image: url('images/Import.jpg');">
+    <div class="overlay"></div>
+    <div class="service-text">
+      <h3>Import</h3>
+      <p>Smooth import of agri-products with logistics and documentation support.</p>
+    </div>
+  </div>
+
+  <div class="service-box" style="background-image: url('images/B2B_Supply.jpg');">
+    <div class="overlay"></div>
+    <div class="service-text">
+      <h3>B2B Supply</h3>
+      <p>Bulk agri-commodity supply across India with assured quality and delivery.</p>
+    </div>
+  </div>
+</section>
+
+<!-- Overlay Modals -->
+<div id="registerModal" class="modal">
+  <div class="modal-content">
+    <span class="close" onclick="closeModal('registerModal')">&times;</span>
+    <h2>Sign Up</h2>
+    <form>
+      <input type="text" placeholder="Full Name" required>
+      <input type="email" placeholder="Email ID" required>
+      <input type="tel" placeholder="Phone Number" required>
+      <input type="password" placeholder="Password" required>
+      <button type="submit">Register</button>
+    </form>
+  </div>
+</div>
+
+<div id="loginModal" class="modal">
+  <div class="modal-content">
+    <span class="close" onclick="closeModal('loginModal')">&times;</span>
+    <h2>Login</h2>
+    <form>
+      <input type="email" placeholder="Email ID" required>
+      <input type="password" placeholder="Password" required>
+      <button type="submit">Login</button>
+    </form>
+  </div>
+</div>
+
+
+<footer class="footer-horizontal">
+  <!-- Owner Section -->
+  <div class="owner-info">
+    <img src="Images/Owner.jpg" alt="Owner" class="owner-photo" />
+    <div class="owner-text">
+      <h3>CEO &amp; FOUNDER</h3>
+      <p>Aniket Atkari</p>
+      <p>+91-9923141800</p>
+      <p>atkarianiket9@gmail.com</p>
+    </div>
+  </div>
+
+  <!-- Separator Line -->
+  <div class="footer-separator"></div>
+
+  <!-- Partners Section -->
+  <div class="partner-info">
+    <div class="partner-logos">
+      <img src="Images/partner-logo.png" alt="Partner 1" />
+      <img src="Images/partner-logo2.png" alt="Partner 2" />
+    </div>
+    <div class="partner-names">
+      <p>Ankit Shashikant Suryawanshi (Additional Director)</p>
+      <p>Ritesh Dadasaheb Suryawanshi (Additional Director)</p>
+      <p>Aniket Shivaji Atkari (Director)</p>
+      <p>Shravan Chintaman Hire (Additional Director)</p>
+      <p>Dattatrey Chintaman Hire (Director)</p>
+    </div>
+  </div>
+</footer>
+
+
+
+<div class="chat-widget">
     <a href="https://wa.me/919923141800" target="_blank">
-      <img src="Whatsapp.png" alt="WhatsApp" class="whatsapp-icon"/>
+      <img src="images/Whatsapp.png" alt="WhatsApp" class="whatsapp-icon"/>
     </a>
   </div>
 </body>
