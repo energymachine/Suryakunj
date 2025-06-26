@@ -486,6 +486,19 @@ nav a, .btn {
   cursor: pointer;
 }
 
+.section {
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+/* Ensure text doesn't overflow */
+.section p, .section h2, .section h3 {
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  hyphens: auto;
+}
+
+
 /* Responsive Breakpoints */
 @media screen and (max-width: 768px) {
   header {
@@ -527,6 +540,26 @@ nav a, .btn {
   border-bottom: 1px solid #eee;
   margin-bottom: 8px; /* optional spacing */
 }
+
+    .section {
+    padding: 20px 10px;
+  }
+
+  .text-block {
+    max-width: 100%;
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  .section h2, .section h3 {
+    font-size: 1.3rem;
+  }
+
+  .section p {
+    font-size: 1rem;
+    line-height: 1.5;
+  }
 
 .purpose-section {
   flex-direction: column;
@@ -577,7 +610,8 @@ nav a, .btn {
   .partner-info {
     gap: 10px;
   }
-}
+
+
 
 
 
