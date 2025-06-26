@@ -512,20 +512,37 @@ nav a, .btn {
   }
 
   .nav-buttons {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    padding: 10px;
-  }
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* center horizontally */
+  width: 100%;
+  padding: 10px;
+}
 
-  .nav-btn, .btn {
-    width: 100%;
-    text-align: right;
-    padding: 10px 20px;
-    font-size: 1rem;
-    border-bottom: 1px solid #eee;
-  }
+.nav-btn, .btn {
+  width: 80%;
+  text-align: center;
+  padding: 10px 20px;
+  font-size: 1rem;
+  border-bottom: 1px solid #eee;
+  margin-bottom: 8px; /* optional spacing */
+}
 
+.purpose-section {
+  flex-direction: column;
+}
+
+.purpose-left,
+.purpose-right {
+  width: 100%;
+  text-align: center;
+  padding: 1.5rem;
+  justify-content: center;
+  align-items: center;
+}
+.purpose-left {
+  font-size: 1.2rem;
+}
   .menu-toggle {
     display: block;
     cursor: pointer;
