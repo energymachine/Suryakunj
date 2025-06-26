@@ -618,7 +618,7 @@ body {
      font-size: 1rem;
     line-height: 1.5;
   }
-}
+
 
 .purpose-section {
   flex-direction: column;
@@ -669,6 +669,14 @@ body {
   .partner-info {
     gap: 10px;
   }
+
+.partner-names p {
+    white-space: normal !important;
+    word-break: break-word;
+    text-align: center;
+    padding: 0 10px;
+  }
+}
 
 
 
