@@ -46,3 +46,37 @@ function toggleMenu() {
     nav.classList.toggle("active");
   }
 
+async function sendOTP() {
+  const phone = document.querySelector('input[name="phone"]').value;
+  const res = await fetch('/api/send-otp', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({ phone })
+  });
+  const data = await res.json();
+  if (data.success) {
+    alert('OTP sent successfully');
+  } else {
+    alert('Failed to send OTP: ' + data.message);
+  }
+}
+
+async function registerUser() {
+  const name = document.querySelector('input[name="name"]').value;
+  const email = document.querySelector('input[name="email"]').value;
+  const phone = document.querySelector('input[name="phone"]').value;
+  const otp = document.querySelector('input[name="otp"]').value;
+  
+  const res = await fetch('/api/register', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({ name, email, phone, otp })
+  });
+  const data = await res.json();
+  if (data.success) {
+    alert('Registered successfully');
+  } else {
+    alert('Registration failed: ' + data.message);
+  }
+}
+
