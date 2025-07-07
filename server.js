@@ -29,9 +29,12 @@ app.post('/api/send-otp', async (req, res) => {
   try {
     await sendOTP(phone);
     res.json({ success: true, message: 'OTP sent successfully' });
-  } catch {
+  } catch (error) {
+    console.error('Error sending OTP in /api/send-otp:', error);
     res.status(500).json({ success: false, message: 'Failed to send OTP' });
   }
+
+  
 });
 
 // Verify OTP and register
