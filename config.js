@@ -15,7 +15,7 @@ export default {
   db: {
     host: 'localhost',
     user: 'root',
-    password: 'yourpassword',
+    password: '',
     database: 'customerdb'
   }
 };
