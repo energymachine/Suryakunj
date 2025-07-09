@@ -47,17 +47,22 @@ function toggleMenu() {
   }
 
 async function sendOTP() {
-  const phone = document.querySelector('input[name="phone"]').value;
-  const res = await fetch('/api/send-otp', {
-    method: 'POST',
-    headers: { 'Content-Type': 'application/json' },
-    body: JSON.stringify({ phone })
-  });
-  const data = await res.json();
-  if (data.success) {
-    alert('OTP sent successfully');
-  } else {
-    alert('Failed to send OTP: ' + data.message);
+  const phone = document.querySelector('input[placeholder="Phone Number"]').value;
+  try {
+    const response = await fetch('/api/send-otp', {
+      method: 'POST',
+      headers: {'Content-Type': 'application/json'},
+      body: JSON.stringify({ phone })
+    });
+    const data = await response.json();
+    if (data.success) {
+      alert('OTP sent successfully');
+    } else {
+      alert('Failed to send OTP');
+    }
+  } catch (error) {
+    console.error('Error:', error);
+    alert('Failed to send OTP');
   }
 }
 
