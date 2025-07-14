@@ -13,9 +13,10 @@ export default {
     from: 'whatsapp:+14155238886'  // Twilio sandbox number (change after setup)
   },
   db: {
-    host: 'localhost',
-    user: 'root',
-    password: '',
-    database: 'customerdb'
+    host: 'dpg-d1o8b549c44c73f9e230-a',
+    user: 'customerdb_x1hl_user',
+    password: 'EXFiYtgHqodRXwND8pvaYRAYRvuvQNCI',
+    database: 'customerdb_x1hl'
+    port: 5432
   }
 };
