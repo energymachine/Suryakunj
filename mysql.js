@@ -1,4 +1,4 @@
-const mysql = require('mysql2/promise');
+const mysql = require('pg');
 const pool = mysql.createPool({
   host: 'localhost',
   user: 'your_db_user',
