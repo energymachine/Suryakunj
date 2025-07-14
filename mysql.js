@@ -9,3 +9,6 @@ const pool = mysql.createPool({
 module.exports = {
   query: (sql, params) => pool.execute(sql, params)
 };
+
+await db.query('INSERT INTO customers(name, email, phone) VALUES($1, $2, $3)', [name, email, phone])
+
