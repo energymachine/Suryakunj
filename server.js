@@ -1,6 +1,8 @@
 // server.js
 import express from 'express';
-import mysql from 'mysql2/promise';
+import pg from 'pg';
+const pool = new pg.Pool(config.db);
+export default pool;
 import { sendOTP, verifyOTP } from './otp.js';
 import { sendWhatsAppMessage } from './whatsapp.js';
 import config from './config.js';
